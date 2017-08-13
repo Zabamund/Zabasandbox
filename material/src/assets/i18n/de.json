@@ -1,0 +1,10 @@
+{
+    "Title": "Ubersetzungsbeispiel",
+    "Intro": "Hallo, ich heisse {{name}}, ich bin {{age}} Jahre alt.",
+    "Startpage": {
+        "TranslationSections": "Hallo Welt"
+    },
+    "Aboutpage": {
+        "TranslationSections": "Wir sind letsboot"
+    }
+}
