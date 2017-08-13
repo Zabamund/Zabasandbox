@@ -14,9 +14,11 @@ There are no rules here other than this:
 * this is a walkthrough of a material tutorial found on youtube at https://www.youtube.com/watch?v=UnKsoCeTdEI&t=22s
 2. bug-attempt
 * this is an attempt at fixing a bug addressed by readers of my medium article on ngx-translate that can be found here https://medium.com/letsboot/translate-angular-4-apps-with-ngx-translate-83302fb6c10d
+* The initial code posted worked but used
 
-The initial code posted worked but used
 import { HttpModule, Http } from '@angular/http';
-this was then replaced by:
+* this was then replaced by:
+
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 in the bug fixed version
