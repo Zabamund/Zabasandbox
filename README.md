@@ -23,6 +23,8 @@ There are no rules here other than this:
 
   the function that returns a new TranslateHttpLoader in the app.module.ts was also changed like so:
 
-`export function HttpLoaderFactory(http: HttpClient) {`
-       `return new TranslateHttpLoader(http);`
-`}`
+```javascript
+export function HttpLoaderFactory(http: HttpClient) {
+       return new TranslateHttpLoader(http);
+}
+```
