@@ -28,3 +28,5 @@ There are no rules here other than this:
          return new TranslateHttpLoader(http);
   }
   ```
+  3. simple-app
+  * a time tracking/clock and date app written in Angular
