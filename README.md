@@ -30,4 +30,5 @@ There are no rules here other than this:
   ```
 
 3. simple-app
-  * a time tracking/clock and date app written in Angular
+  * a simple date and time app written in Angular and using Bootstrap css for styling
+  * the greeting changes depending on time of day at page load. It does not change with passing time once the page is loaded
