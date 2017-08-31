@@ -31,15 +31,20 @@ export class TitleComponent implements OnInit {
   }
 
   setGreeting() {
-    if (this.timeNow === undefined) {
-      this.greeting = 'oh no! Time has stopped!'
-    } else if (this.timeNow.getHours() < 12) {
-      this.greeting = 'good morning to you.'
-    } else if (this.timeNow.getHours() > 12) {
-      this.greeting = 'a very good afternoon to you.'
-    } else if (this.timeNow.getHours() === 12) {
+    const timeString = "" + this.timeNow.getHours() + this.timeNow.getMinutes();
+    let timeInteger = parseInt(timeString);
+    if (timeString === undefined) {
+      this.greeting = 'oh no! timeNow is undefined!'
+    } else if (timeInteger < 1145) {
+      this.greeting = 'and good morning.';
+    } else if (timeInteger >= 1145 && timeInteger <= 1300) {
       this.greeting = 'it\'s lunchtime, bon appétit!'
+    } else if (timeInteger > 1300 && timeInteger <= 1700) {
+      this.greeting = 'and good afternoon.'
+    } else if (timeInteger > 1700) {
+      this.greeting = 'and good evening.'
+    } else {
+      this.greeting = 'how are you today?'
     }
   }
-
 }
