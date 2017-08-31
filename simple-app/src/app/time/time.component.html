@@ -1,3 +1,10 @@
-<p>And it is: {{timeNow | date:'HH'}}:{{timeNow | date:'mm'}}:{{timeNow | date:'ss'}} - {{timeNow | date:'Z'}}</p>
-<p>Or {{timeNow | date:"shortTime"}}
-<p><i>Time component subscribes to the ClockService to track time and set timeNow to current time, it makes use of date pipes for formatting</i></p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Time</h3>
+    </div>
+    <div class="panel-body">
+        <p>And it is: {{timeNow | date:'HH'}}:{{timeNow | date:'mm'}}:{{timeNow | date:'ss'}} - {{timeNow | date:'Z'}}</p>
+        <p>Or {{timeNow | date:"shortTime"}}</p>
+        <p><i>Time component subscribes to the ClockService to track time and set timeNow to current time, it makes use of date pipes for formatting</i></p>
+    </div>
+</div>
