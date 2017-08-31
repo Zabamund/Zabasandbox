@@ -8,7 +8,6 @@ import 'rxjs/add/operator/share';
 export class ClockService {
 
   private clock: Observable<Date>;
-  timeNow: Date;
 
   constructor() {
     this.clock = Observable
