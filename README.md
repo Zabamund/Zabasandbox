@@ -32,3 +32,7 @@ There are no rules here other than this:
 3. simple-app
   * a simple date and time app written in Angular and using Bootstrap css for styling
   * the greeting changes depending on time of day at page load. It does not change with passing time once the page is loaded
+
+4. photo-gallery
+  * a simple CRUD example to practise my skills
+  * also the basis of a tutorial on medium if you want a walkthrough
