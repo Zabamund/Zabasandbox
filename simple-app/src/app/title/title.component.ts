@@ -16,14 +16,6 @@ export class TitleComponent implements OnInit {
 
   constructor(private clockService: ClockService) { }
 
-  ngOnInit() {
-    this.getTimeNow();
-  }
-
-  getTimeNow() {
-    this.clockService
-      .getClock()
-      .subscribe((time) => this.timeNow = time);
-  }
+  ngOnInit() {}
 
 }
