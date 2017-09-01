@@ -11,7 +11,7 @@ import { Photo } from '../photo';
 export class PhotoService {
 
   url = 'http://localhost:3000/photos';
-  private headers = new HttpHeaders ({ 'Content-Type': 'application/json' });
+  private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   constructor(
     private httpClient: HttpClient
@@ -34,6 +34,14 @@ export class PhotoService {
     const getUrl = this.url + '/' + id;
     return this.httpClient
       .get(getUrl)
+      .map((response: Response) => response.json());
+  }
+
+  update(photo: Photo): Observable<Photo> {
+    const putUrl = this.url + '/' + photo.id;
+    return this.httpClient
+      .put(putUrl, photo,
+      { headers: this.headers })
       .map((response: Response) => response.json());
   }
 
