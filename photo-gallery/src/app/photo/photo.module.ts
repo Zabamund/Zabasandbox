@@ -8,6 +8,15 @@ import { FormComponent } from './form/form.component';
   imports: [
     CommonModule
   ],
-  declarations: [GalleryComponent, DetailComponent, FormComponent]
+  declarations: [
+    GalleryComponent,
+    DetailComponent,
+    FormComponent
+  ],
+  exports: [
+    DetailComponent,
+    FormComponent,
+    GalleryComponent
+  ]
 })
 export class PhotoModule { }

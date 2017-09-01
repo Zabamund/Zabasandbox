@@ -8,6 +8,15 @@ import { TimeComponent } from './time/time.component';
   imports: [
     CommonModule
   ],
-  declarations: [TitleComponent, GreetingComponent, TimeComponent]
+  declarations: [
+    TitleComponent,
+    GreetingComponent,
+    TimeComponent
+  ],
+  exports: [
+    TitleComponent,
+    GreetingComponent,
+    TimeComponent
+  ]
 })
 export class HeaderModule { }
