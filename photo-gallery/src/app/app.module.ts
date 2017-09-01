@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +16,6 @@ import { PhotoService, TimeService } from './shared';
     BrowserModule,
     HeaderModule,
     PhotoModule,
-    HttpClient
   ],
   providers: [
     PhotoService,
