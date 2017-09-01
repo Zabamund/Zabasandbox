@@ -45,4 +45,12 @@ export class PhotoService {
       .map((response: Response) => response.json());
   }
 
+  deleteById(id: number): Observable<number> {
+    const deleteUrl = this.url + '/' + id;
+    return this.httpClient
+      .delete(deleteUrl,
+      { headers: this.headers })
+      .map((response: Response) => response.json());
+  }
+
 }
