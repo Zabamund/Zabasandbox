@@ -53,4 +53,11 @@ export class PhotoService {
       .map((response: Response) => response.json());
   }
 
+  deleteAll(): Observable<Photo[]> {
+    return this.httpClient
+      .delete(this.url,
+      { headers: this.headers })
+      .map((response: Response) => response.json());
+  }
+
 }
