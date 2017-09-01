@@ -30,4 +30,11 @@ export class PhotoService {
       .map((response: Response) => response.json());
   }
 
+  getById(id: number): Observable<Photo> {
+    const getUrl = this.url + '/' + id;
+    return this.httpClient
+      .get(getUrl)
+      .map((response: Response) => response.json());
+  }
+
 }
