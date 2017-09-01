@@ -24,4 +24,10 @@ export class PhotoService {
       .map((response: Response) => response.json());
   }
 
+  getAll(): Observable<Photo[]> {
+    return this.httpClient
+      .get(this.url + '?_sort=id&_order=desc')
+      .map((response: Response) => response.json());
+  }
+
 }
