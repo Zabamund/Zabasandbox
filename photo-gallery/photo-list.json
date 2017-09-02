@@ -1,108 +1,108 @@
 {
     "photos": [
         {
-            "id": "0",
+            "id": 0,
             "name": "abstract",
             "caption": "an abstract view",
             "src": "http://lorempixel.com/400/200/abstract",
             "category": "abstract",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "1",
+            "id": 1,
             "name": "city",
             "caption": "a city vibe",
             "src": "http://lorempixel.com/400/200/city",
             "category": "city",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "2",
+            "id": 2,
             "name": "people",
             "caption": "humans",
             "src": "http://lorempixel.com/400/200/people",
             "category": "people",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "3",
+            "id": 3,
             "name": "transport",
             "caption": "keep moving",
             "src": "http://lorempixel.com/400/200/transport",
             "category": "transport",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "4",
+            "id": 4,
             "name": "animals",
             "caption": "cute or fierce",
             "src": "http://lorempixel.com/400/200/animals",
             "category": "animals",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "5",
+            "id": 5,
             "name": "food",
             "caption": "gotta eat",
             "src": "http://lorempixel.com/400/200/food",
             "category": "food",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "6",
+            "id": 6,
             "name": "nature",
             "caption": "there she is",
             "src": "http://lorempixel.com/400/200/nature",
             "category": "nature",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "7",
+            "id": 7,
             "name": "business",
             "caption": "money makes the world go round... or does it ?",
             "src": "http://lorempixel.com/400/200/business",
             "category": "business",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "8",
+            "id": 8,
             "name": "nightlife",
             "caption": "it never sleeps",
             "src": "http://lorempixel.com/400/200/nightlife",
             "category": "nightlife",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "9",
+            "id": 9,
             "name": "sports",
             "caption": "harder better faster stronger",
             "src": "http://lorempixel.com/400/200/sports",
             "category": "sports",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "10",
+            "id": 10,
             "name": "cats",
             "caption": "you gotta have a cat",
             "src": "http://lorempixel.com/400/200/cats",
             "category": "cats",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "11",
+            "id": 11,
             "name": "fashion",
             "caption": "style",
             "src": "http://lorempixel.com/400/200/fashion",
             "category": "fashion",
-            "price": "10"
+            "price": 10
         },
         {
-            "id": "12",
+            "id": 12,
             "name": "technics",
             "caption": "the future ?",
             "src": "http://lorempixel.com/400/200/technics",
             "category": "technics",
-            "price": "10"
+            "price": 10
         }
     ]
 }
