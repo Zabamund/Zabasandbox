@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 import { PhotoService, Photo } from '../../shared';
+
+import { trashcan, pencil } from 'octicons';
 
 @Component({
   selector: 'pgy-gallery',
@@ -14,11 +17,17 @@ export class GalleryComponent implements OnInit {
   photoToEdit: Photo;
   showNewForm = false;
 
+  private trashcanIcon: SafeHtml;
+  private pencilIcon: SafeHtml;
+
   constructor(
-    private photoService: PhotoService
+    private photoService: PhotoService,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit() {
+    this.trashcanIcon = this.sanitizer.bypassSecurityTrustHtml(trashcan.toSVG());
+    this.pencilIcon = this.sanitizer.bypassSecurityTrustHtml(pencil.toSVG());
     this.loadPhotos();
   }
 
