@@ -1,7 +1,9 @@
-<div class="row">
-  <div *ngFor="let photo of photos">
-    <div class="col-md-3 col-sm-4 col-xs-6">
-      <img class="img-responsive" data-toggle="modal" data-target="#picture" src="{{photo.src}}" /> {{photo.caption}}
+<div class="container">
+  <div class="row">
+    <div *ngFor="let photo of photos">
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <img class="img-responsive" data-toggle="modal" data-target="#picture" src="{{photo.src}}" /> {{photo.caption}}
+      </div>
     </div>
   </div>
 </div>
