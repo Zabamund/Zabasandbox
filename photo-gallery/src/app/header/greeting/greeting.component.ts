@@ -23,13 +23,23 @@ export class GreetingComponent implements OnInit {
       .subscribe((time) => this.timeNow = time);
     setTimeout(() => {
       this.setGreeting();
-    }, 1000);
+    }, 2000);
     return this.timeNow;
   }
 
+  addZero(i) {
+    if (i < 10) {
+      i = '0' + i;
+    }
+    return i;
+  }
+
   setGreeting() {
-    const timeString = '' + this.timeNow.getHours() + this.timeNow.getMinutes();
+    const hrs = this.addZero(this.timeNow.getHours());
+    const min = this.addZero(this.timeNow.getMinutes());
+    const timeString = '' + hrs + min;
     const timeInt = parseInt(timeString, 10);
+
     if (timeString === undefined) {
       this.greeting = 'time is undefined';
     } else if (timeInt < 1145) {
