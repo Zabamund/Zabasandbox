@@ -17,8 +17,8 @@ export class GalleryComponent implements OnInit {
   photoToEdit: Photo;
   showNewForm = false;
 
-  private trashcanIcon: SafeHtml;
-  private pencilIcon: SafeHtml;
+  public trashcanIcon: SafeHtml;
+  public pencilIcon: SafeHtml;
 
   constructor(
     private photoService: PhotoService,
@@ -35,6 +35,18 @@ export class GalleryComponent implements OnInit {
     this.photoService
       .getAll()
       .subscribe((photos) => this.photos = photos);
+  }
+
+  deletePhoto(photo: Photo) {
+    this.photoService
+      .deleteById(photo)
+      .subscribe(result => this.loadPhotos());
+  }
+
+  deleteAll() {
+    for (let i = 0; i < this.photos.length; i++) {
+      this.deletePhoto(this.photos[i]);
+    }
   }
 
 }
