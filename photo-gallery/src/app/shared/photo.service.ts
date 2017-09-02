@@ -48,10 +48,4 @@ export class PhotoService {
       { headers: this.headers });
   }
 
-  deleteAll(): Observable<Array<Photo>> {
-    return this.httpClient
-      .delete<Array<Photo>>(this.url,
-      { headers: this.headers });
-  }
-
 }
