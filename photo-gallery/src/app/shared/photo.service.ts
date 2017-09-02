@@ -19,45 +19,39 @@ export class PhotoService {
 
   add(photo: Photo): Observable<Photo> {
     return this.httpClient
-      .post(this.url, photo,
-      { headers: this.headers })
-      .map((response: Response) => response.json());
+      .post<Photo>(this.url, photo,
+      { headers: this.headers });
   }
 
-  getAll(): Observable<Photo[]> {
+  getAll(): Observable<Array<Photo>> {
     return this.httpClient
-      .get(this.url + '?_sort=id&_order=desc')
-      .map((response: Response) => response.json());
+      .get<Array<Photo>>(this.url);
   }
 
   getById(id: number): Observable<Photo> {
     const getUrl = this.url + '/' + id;
     return this.httpClient
-      .get(getUrl)
-      .map((response: Response) => response.json());
+      .get<Photo>(getUrl);
   }
 
   update(photo: Photo): Observable<Photo> {
     const putUrl = this.url + '/' + photo.id;
     return this.httpClient
-      .put(putUrl, photo,
-      { headers: this.headers })
-      .map((response: Response) => response.json());
+      .put<Photo>(putUrl, photo,
+      { headers: this.headers });
   }
 
-  deleteById(id: number): Observable<number> {
-    const deleteUrl = this.url + '/' + id;
+  deleteById(photo: Photo): Observable<Photo> {
+    const deleteUrl = this.url + '/' + photo.id;
     return this.httpClient
-      .delete(deleteUrl,
-      { headers: this.headers })
-      .map((response: Response) => response.json());
+      .delete<Photo>(deleteUrl,
+      { headers: this.headers });
   }
 
-  deleteAll(): Observable<Photo[]> {
+  deleteAll(): Observable<Array<Photo>> {
     return this.httpClient
-      .delete(this.url,
-      { headers: this.headers })
-      .map((response: Response) => response.json());
+      .delete<Array<Photo>>(this.url,
+      { headers: this.headers });
   }
 
 }
