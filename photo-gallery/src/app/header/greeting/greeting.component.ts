@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TimeService } from '../../shared';
+
 @Component({
   selector: 'pgy-greeting',
   templateUrl: './greeting.component.html',
@@ -7,9 +9,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GreetingComponent implements OnInit {
 
-  constructor() { }
+  timeNow: Date;
+  greeting = 'default text...';
+
+  constructor(private timeService: TimeService) { }
 
   ngOnInit() {
+    this.checkTime();
+  }
+
+  checkTime(): Date {
+    this.timeService.getClock()
+      .subscribe((time) => this.timeNow = time);
+    setTimeout(() => {
+      this.setGreeting();
+    }, 1000);
+    return this.timeNow;
+  }
+
+  setGreeting() {
+    const timeString = '' + this.timeNow.getHours() + this.timeNow.getMinutes();
+    const timeInt = parseInt(timeString, 10);
+    if (timeString === undefined) {
+      this.greeting = 'time is undefined';
+    } else if (timeInt < 1145) {
+      this.greeting = ' good morning to you.';
+    } else if (timeInt >= 1145 && timeInt <= 1300) {
+      this.greeting = ' it\'s lunchtime, bon appétit!';
+    } else if (timeInt > 1300 && timeInt <= 1700) {
+      this.greeting = ' good afternoon to you.';
+    } else if (timeInt > 1700) {
+      this.greeting = ' good evening to you.';
+    } else {
+      this.greeting = ' how are you today?';
+    }
   }
 
 }
