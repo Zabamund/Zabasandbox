@@ -5,7 +5,7 @@ import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Photo } from '../photo';
+import { Photo } from './';
 
 @Injectable()
 export class PhotoService {
