@@ -49,4 +49,21 @@ export class GalleryComponent implements OnInit {
     }
   }
 
+  updatePhoto(photo: Photo) {
+    this.photoToEdit = photo;
+  }
+
+  selectPhoto(photo: Photo) {
+    this.clickedPhoto = photo;
+  }
+
+  closeNewForm() {
+    this.showNewForm = false;
+  }
+
+  closeEditForm() {
+    this.photoToEdit = null;
+  }
+
+
 }
