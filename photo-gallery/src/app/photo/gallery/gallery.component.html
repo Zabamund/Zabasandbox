@@ -1,17 +1,28 @@
+<div class="container" *ngIf="showNewForm == false">
+  <div class="panel panel-success">
+    <div class="panel-body">
+      <button type="button" class="btn btn-success btn-lg btn-block" (click)="showNewForm = true">Add new photo</button>
+    </div>
+  </div>
+</div>
+
+<pgy-form *ngIf="photoToEdit" [photo]="photoToEdit" (onClose)="closeEditForm()" (onSave)="loadPhotos()"></pgy-form>
+
+<pgy-form *ngIf="showNewForm" (onClose)="closeNewForm()" (onSave)="loadPhotos()"></pgy-form>
+
 <div class="container">
   <div class="row">
     <div *ngFor="let photo of photos">
       <div class="col-md-3 col-sm-4 col-xs-6">
         <img class="img-responsive" data-toggle="modal" data-target="#picture" src="{{photo.src}}" /> {{photo.caption}}
         <span [innerHTML]="trashcanIcon" (click)="deletePhoto(photo)"></span>
-        <span [innerHTML]="pencilIcon"></span>
+        <span [innerHTML]="pencilIcon" (click)="updatePhoto(photo)"></span>
       </div>
     </div>
   </div>
 </div>
 
 <hr>
-
 <div class="container">
   <div class="panel panel-danger">
     <div class="panel-heading">
@@ -22,3 +33,4 @@
     </div>
   </div>
 </div>
+<hr>
