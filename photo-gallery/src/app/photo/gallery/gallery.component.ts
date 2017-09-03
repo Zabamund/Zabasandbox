@@ -47,6 +47,7 @@ export class GalleryComponent implements OnInit {
     for (let i = 0; i < this.photos.length; i++) {
       this.deletePhoto(this.photos[i]);
     }
+    this.loadPhotos();
   }
 
   updatePhoto(photo: Photo) {
