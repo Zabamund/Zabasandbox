@@ -1,3 +1,37 @@
-<p>
-  form works!
-</p>
+<div class="container">
+    <h2 *ngIf="!photo?.id">New Photo</h2>
+    <h2 *ngIf="photo?.id">Update: {{photo.name}}</h2>
+    <div class="alert alert-info" role="alert" *ngIf="isSaving">Saving photo to *.json</div>
+    <div class="alert alert-info" role="alert" *ngIf="saveOK">Photo saved</div>
+    <div class="alert alert-info" role="alert" *ngIf="error">Photo not saved</div>
+</div>
+
+<form (ngSubmit)="onSubmit()" #photoForm="ngForm">
+    <div class="container">
+        <div class="form-group">
+
+            <label for="photoName">Name:</label>
+            <input class="form-control" name="photoName" id="name" required type="text" [(ngModel)]="photo.name" #titleField="ngModel">
+            <div class="error" [hidden]="titleField.valid || titleField.untouched"><i>Please input a photo name</i></div>
+
+            <br>
+
+            <label for="photoCaption">Caption:</label>
+            <input class="form-control" name="photoCaption" id="caption" required type="text" [(ngModel)]="photo.caption" #captionField="ngModel">
+            <div class="error" [hidden]="captionField.valid || captionField.untouched"><i>Please provide a photo caption</i></div>
+
+            <br>
+
+            <label for="photoPrice">Price:</label>
+            <input class="form-control" name="photoPrice" id="price" required type="number" [(ngModel)]="photo.price" #priceField="ngModel">
+            <div class="error" [hidden]="priceField.valid || priceField.untouched"><i>Please state your price in USD</i></div>
+
+            <br>
+
+            <button type="submit" [disabled]="photoForm.invalid" class="btn btn-success">Save</button>
+
+            <button (click)=close() class="btn btn-info">Close</button>
+
+        </div>
+    </div>
+</form>
