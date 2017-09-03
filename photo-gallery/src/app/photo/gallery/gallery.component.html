@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<pgy-form *ngIf="photoToEdit" [photo]="photoToEdit" (onClose)="closeEditForm()" (onSave)="loadPhotos()"></pgy-form>
+<pgy-form *ngIf="photoToEdit" [photo]="photoToEdit" (onClose)="closeEditForm()" (onSave)="loadPhotos()" (onSave)="closeEditForm()"></pgy-form>
 
 <pgy-form *ngIf="showNewForm" (onClose)="closeNewForm()" (onSave)="loadPhotos()" (onSave)="closeNewForm()"></pgy-form>
 
