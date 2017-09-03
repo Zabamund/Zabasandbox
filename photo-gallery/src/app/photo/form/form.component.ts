@@ -36,7 +36,7 @@ export class FormComponent {
   onSubmit() {
     this.isSaving = true;
     let save: Observable<Photo>;
-    if (this.photo.id > 0) {
+    if (this.photo.id) {
       save = this.photoService.update(this.photo);
     } else {
       save = this.photoService.add(this.photo);
