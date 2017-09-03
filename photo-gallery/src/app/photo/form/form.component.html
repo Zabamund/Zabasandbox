@@ -28,6 +28,12 @@
 
             <br>
 
+            <label for="src">Image url:</label>
+            <input class="form-control" name="photoSrc" id="src" required type="text" [(ngModel)]="photo.src" #srcField="ngModel">
+            <div class="error" [hidden]="srcField.valid || srcField.untouched"><i>Please provide the image url</i></div>
+
+            <br>
+
             <button type="submit" [disabled]="photoForm.invalid" class="btn btn-success">Save</button>
 
             <button (click)=close() class="btn btn-info">Close</button>
