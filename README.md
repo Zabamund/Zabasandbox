@@ -36,3 +36,12 @@ There are no rules here other than this:
 4. photo-gallery
   * a simple CRUD example to practise my skills
   * also the basis of a tutorial on medium if you want a walkthrough
+  * this app shows a jumbotron for practise
+  * a panel for practise
+  * a greeting with some time logic that can be dismissed
+  * a clock that changes with passing time
+  * a gallery of fixed photos
+  * new photos can be added if a url is provided
+  * photos can be edited, deleted, or their details can be viewed in a modal display
+  * all photos can be deleted at once
+  
