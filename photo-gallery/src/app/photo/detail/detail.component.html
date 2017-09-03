@@ -1,3 +1,17 @@
-<p>
-  detail works!
-</p>
+<div *ngIf="photo">
+  <div class="modal fade" id="photo" tabindex="-1" role="dialog" aria-labelledby="photoLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title" id="photoLabel">{{photo.name}}</h3>
+        </div>
+        <div class="modal-body" style="text-align:center;">
+          <img class="photo-detail" src="{{photo.src}}">
+          <p><b>{{photo.caption}}</b></p>
+          <p>Photo ID: {{photo.id}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
