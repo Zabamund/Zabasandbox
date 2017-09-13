@@ -10,7 +10,7 @@ import { Photo } from './';
 @Injectable()
 export class PhotoService {
 
-  url = 'http://localhost:3000/photos';
+  url = 'http://my-json-server.typicode.com/Zabamund/Zabasandbox/photos';
   private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   constructor(
