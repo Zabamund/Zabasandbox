@@ -1,0 +1,18 @@
+<h1 translate>Title</h1>
+
+<div>
+  {{ 'Intro' | translate:user }}
+</div>
+
+<div>
+  {{ 'Startpage.TranslationSections' | translate }}
+</div>
+
+<div>
+  {{ 'Aboutpage.TranslationSections' | translate }}
+</div>
+
+<br/>
+
+<button (click)="switchLanguage('en')">en</button>
+<button (click)="switchLanguage('fr')">fr</button>
