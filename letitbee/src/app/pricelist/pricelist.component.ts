@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'lib-pricelist',
   templateUrl: './pricelist.component.html',
   styleUrls: ['./pricelist.component.css']
 })
-export class PricelistComponent implements OnInit {
+export class PricelistComponent {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MdDialogRef<PricelistComponent>,
+    @Inject(MD_DIALOG_DATA) public data: any) { }
 
-  ngOnInit() {
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }
