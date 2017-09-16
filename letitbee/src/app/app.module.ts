@@ -12,12 +12,14 @@ import { MdButtonModule } from '@angular/material';
 import { MdDialogModule } from '@angular/material';
 
 import { CardComponent } from './card/card.component';
+import { PricelistComponent } from './pricelist/pricelist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    CardComponent
+    CardComponent,
+    PricelistComponent
   ],
   imports: [
     BrowserModule,
