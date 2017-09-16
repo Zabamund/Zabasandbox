@@ -5,6 +5,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { CardComponent } from './card/card.component';
+import { PricelistComponent } from './pricelist/pricelist.component';
+
 import { MdToolbarModule } from '@angular/material';
 import { MdIconModule } from '@angular/material';
 import { MdCardModule } from '@angular/material';
@@ -13,8 +16,6 @@ import { MdInputModule } from '@angular/material';
 import { MdDialogModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
-import { CardComponent } from './card/card.component';
-import { PricelistComponent } from './pricelist/pricelist.component';
 
 @NgModule({
   declarations: [
