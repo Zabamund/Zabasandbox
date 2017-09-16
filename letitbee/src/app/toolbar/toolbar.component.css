@@ -5,3 +5,8 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+.title {
+  font-family: "Papyrus", "Comic Sans MS", serif;
+  font-size: 2em;
+}
