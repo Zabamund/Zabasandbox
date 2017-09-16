@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MdToolbarModule } from '@angular/material';
+import { MdIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MdToolbarModule } from '@angular/material';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MdToolbarModule
+    MdToolbarModule,
+    MdIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
