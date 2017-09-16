@@ -24,6 +24,9 @@ import { FormsModule } from '@angular/forms';
     CardComponent,
     PricelistComponent
   ],
+  entryComponents: [
+    PricelistComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
