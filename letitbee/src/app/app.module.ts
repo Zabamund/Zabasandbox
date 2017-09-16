@@ -8,6 +8,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MdToolbarModule } from '@angular/material';
 import { MdIconModule } from '@angular/material';
 import { MdCardModule } from '@angular/material';
+import { MdButtonModule } from '@angular/material';
 
 import { CardComponent } from './card/card.component';
 
@@ -23,7 +24,8 @@ import { CardComponent } from './card/card.component';
     MdToolbarModule,
     MdIconModule,
     FlexLayoutModule,
-    MdCardModule
+    MdCardModule,
+    MdButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
