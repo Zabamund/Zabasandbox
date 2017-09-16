@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MdToolbarModule } from '@angular/material';
 import { MdIconModule } from '@angular/material';
+import { MdCardModule } from '@angular/material';
+
 import { CardComponent } from './card/card.component';
 
 @NgModule({
@@ -20,7 +22,8 @@ import { CardComponent } from './card/card.component';
     BrowserAnimationsModule,
     MdToolbarModule,
     MdIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
