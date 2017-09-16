@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
+
+import { PricelistComponent } from '../pricelist/pricelist.component';
 
 @Component({
   selector: 'lib-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
-  constructor() { }
+  constructor(public dialog: MdDialog) { }
 
-  ngOnInit() {
+  openPricelist(): void {
+    const dialogRef = this.dialog.open(PricelistComponent, {
+      width: '35em',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('dialog was closed');
+    });
   }
 
 }
