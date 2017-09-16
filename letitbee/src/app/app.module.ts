@@ -11,6 +11,7 @@ import { MdCardModule } from '@angular/material';
 import { MdButtonModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
 import { MdDialogModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 import { CardComponent } from './card/card.component';
 import { PricelistComponent } from './pricelist/pricelist.component';
@@ -31,7 +32,8 @@ import { PricelistComponent } from './pricelist/pricelist.component';
     MdCardModule,
     MdButtonModule,
     MdInputModule,
-    MdDialogModule
+    MdDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
